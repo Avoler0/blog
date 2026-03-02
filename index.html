@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Blog | Minimalist Terminal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+    <style>
+        body { font-family: "Pretendard", sans-serif; background-color: #0D1117; color: #C9D1D9; }
+        .mono { font-family: 'JetBrains Mono', 'Fira Code', monospace; }
+        .card { background-color: #161B22; border: 1px solid #30363D; border-radius: 12px; transition: 0.2s; }
+        .card:hover { border-color: #58A6FF; }
+        .grass-box { width: 10px; height: 10px; border-radius: 2px; }
+        /* 잔디 색상들 */
+        .grass-0 { background-color: #161b22; }
+        .grass-1 { background-color: #0e4429; }
+        .grass-2 { background-color: #006d32; }
+        .grass-3 { background-color: #26a641; }
+        .grass-4 { background-color: #39d353; }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <header class="max-w-6xl mx-auto flex justify-between items-center mb-12">
+        <h1 class="text-xl font-bold tracking-tight">Voler<span class="text-blue-400">.dev</span></h1>
+        <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-400">
+            <a href="#" class="hover:text-white transition">Home</a>
+            <a href="#" class="hover:text-white transition">Posts</a>
+            <a href="#" class="hover:text-white transition">Projects</a>
+            <a href="#" class="hover:text-white transition">About</a>
+        </nav>
+        <button class="p-2 hover:bg-gray-800 rounded-lg">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+        </button>
+    </header>
+
+    <main class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <div class="lg:col-span-8">
+            <h2 class="text-lg font-semibold mb-6 flex items-center">
+                <span class="text-green-400 mr-2">></span> Minimalist Terminal
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <article class="card p-6">
+                    <span class="text-xs text-blue-400 font-medium">2026.03.02</span>
+                    <h3 class="text-lg font-bold mt-2 mb-3">Building Portfolios with Next.js and GitHub Pages</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed mb-6">
+                        정적 사이트 배포의 효율성과 커스텀 도메인 설정법, 그리고 Tailwind를 통한 스타일링...
+                    </p>
+                    <div class="flex gap-2 text-[10px] font-bold">
+                        <span class="px-2 py-1 bg-gray-800 rounded-full text-blue-300">#Nextjs</span>
+                        <span class="px-2 py-1 bg-gray-800 rounded-full text-green-300">#Github</span>
+                    </div>
+                </article>
+
+                <article class="card p-6">
+                    <span class="text-xs text-blue-400 font-medium">2026.02.28</span>
+                    <h3 class="text-lg font-bold mt-2 mb-3">A Journey into Golang Microservices</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed mb-6">
+                        고성능 백엔드 시스템 구축을 위한 Go 언어 활용기와 마이크로서비스 아키텍처 도입기...
+                    </p>
+                    <div class="flex gap-2 text-[10px] font-bold">
+                        <span class="px-2 py-1 bg-gray-800 rounded-full text-green-300">#Golang</span>
+                        <span class="px-2 py-1 bg-gray-800 rounded-full text-red-300">#Backend</span>
+                    </div>
+                </article>
+
+                </div>
+        </div>
+
+        <aside class="lg:col-span-4 space-y-6">
+            <div class="card p-6 flex items-center space-x-4">
+                <div class="w-12 h-12 bg-gray-700 rounded-full flex-shrink-0 overflow-hidden">
+                    <img src="https://via.placeholder.com/150" alt="profile">
+                </div>
+                <div>
+                    <h4 class="font-bold">Voler</h4>
+                    <p class="text-xs text-gray-500">기록하며 성장하는 개발자</p>
+                </div>
+            </div>
+
+            <div class="card p-6">
+                <h4 class="text-md font-extrabold text-gray-400 mb-4 flex items-center justify-between">
+                    GitHub Contribution Graph
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                </h4>
+                <div class="grid grid-cols-7 gap-1 border border-[#30363D] rounded-md p-2">
+                    <script>
+                        for(let i=0; i<35; i++) {
+                            const level = Math.floor(Math.random() * 5);
+                            document.write(`<div class="grass-box grass-${level} border border-[#30363D]"></div>`);
+                        }
+                    </script>
+                </div>
+            </div>
+
+            <div class="card p-4">
+                <div class="relative">
+                    <input type="text" placeholder="Search Posts..." class="w-full bg-[#0D1117] border border-[#30363D] rounded-md py-2 px-10 text-xs focus:outline-none focus:border-blue-500">
+                    <svg class="w-4 h-4 absolute left-3 top-2.5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="max-w-6xl mx-auto mt-20 py-8 border-t border-[#30363D] text-center text-xs text-gray-500">
+        &copy; 2026 Voler.dev. Built with Next.js & GitHub Pages.
+    </footer>
+
+</body>
+</html>
